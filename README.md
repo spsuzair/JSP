@@ -1,2 +1,0 @@
-# JSP
- JavaScript Projects

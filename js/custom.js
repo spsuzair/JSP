@@ -41,7 +41,21 @@ jQuery(document).ready(function($) {
 		
 		// tooltip
 		$('.social-network li a, .options_box .color a').tooltip();
- 
+
+		// fancybox
+		$(".fancybox").fancybox({				
+				padding : 0,
+				autoResize: true,
+				beforeShow: function () {
+					this.title = $(this.element).attr('title');
+					this.title = '<h4>' + this.title + '</h4>' + '<p>' + $(this.element).parent().find('img').attr('alt') + '</p>';
+				},
+				helpers : {
+					title : { type: 'inside' },
+				}
+			});
+
+		
 		//scroll to top
 		$(window).scroll(function(){
 			if ($(this).scrollTop() > 100) {
@@ -119,31 +133,5 @@ jQuery(document).ready(function($) {
         sync                : "",                //{NEW} Selector: Mirror the actions performed on this slider with another slider. Use with care.
         asNavFor            : "",                //{NEW} Selector: Internal property exposed for turning the slider into a thumbnail navigation for another slider
     });
-	/* -------- Isotope Filtering -------- */
-		var $container = $('#isotope-gallery-container');
-		var $filter = $('.filter');
-		$(window).load(function () {
-		// Initialize Isotope
-		$container.isotope({
-			itemSelector: '.gallery-item-wrapper'
-		});
-		$('.filter a').click(function () {
-			var selector = $(this).attr('data-filter');
-			$container.isotope({ filter: selector });
-			return false;
-		});
-		$filter.find('a').click(function () {
-			var selector = $(this).attr('data-filter');
-			$filter.find('a').parent().removeClass('active');
-			$(this).parent().addClass('active');
-		});
-		});
-		$(window).smartresize(function () {
-		$container.isotope('reLayout');
-		});
-		// End Isotope Filtering
-		$('.gallery-zoom').magnificPopup({ 
-				type: 'image'
-				// other options
-			});
+
 });

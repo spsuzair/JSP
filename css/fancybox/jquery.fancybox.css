@@ -154,8 +154,8 @@
 .fancybox-nav span {
 	position: absolute;
 	top: 50%;
-width: 44px;
-height: 32px;
+	width: 44px;
+	height: 32px;
 	margin-top: -25px;
 	cursor: pointer;
 	z-index: 8040;
@@ -163,11 +163,11 @@ height: 32px;
 	background-color: #26292E;
 	background-position-y: -38px;
 	opacity: 0.5;
-	
-	-webkit-transition: background 0.1s linear 0s, opacity 0.1s linear 0s;	
-	   -moz-transition: background 0.1s linear 0s, opacity 0.1s linear 0s;
-		 -o-transition: background 0.1s linear 0s, opacity 0.1s linear 0s;
-		    transition: background 0.1s linear 0s, opacity 0.1s linear 0s;
+	-webkit-transition: background 0.1s linear 0s, opacity 0.1s linear 0s;
+	-moz-transition: background 0.1s linear 0s, opacity 0.1s linear 0s;
+	-o-transition: background 0.1s linear 0s, opacity 0.1s linear 0s;
+	transition: background 0.1s linear 0s, opacity 0.1s linear 0s;
+	background-color: transparent;
 }
 .fancybox-next span { 
 background-position-y: -72px;
@@ -295,7 +295,7 @@ background-position-y: -72px;
 
 .fancybox-title-inside-wrap {
 	padding: 3px 30px 6px;
-	background:#61B331;
+	background: #232323;
 }
 
 .fancybox-title-over-wrap {
